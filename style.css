@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.7),  rgba(0,0,0,0.7)), url(background.jpg);
+    background-size: cover;
+
+    .calculator {
+      background: #000;
+      height: 39.5rem;
+      width: 18.25rem;
+      border-radius: 1.5625rem;
+      padding: 1rem;
+      color: #fff;
+      position: relative;
+
+      .time {
+        padding: 0 0.625rem;
+        height: 7.75rem;
+        font-size: 0.75rem;
+        font-size: 1rem;
+      }
+
+      .result {
+        font-size: 4rem;
+        font-weight: 300;
+        margin: 0 0.625rem 0.625rem 0;
+        height: 5rem;
+        text-align: right;
+        overflow: hidden;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-gap: 0.625rem;
+
+        .button{
+          height: 57.5px;
+          width: 57.5px;
+          font-size: 1.5rem;
+          border-radius: 50%;
+          border: none;
+          background: #333;
+          color: #fff;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          /* &:focus {
+            filter: brightness(120%);
+          } */
+
+          &:hover {
+            filter: brightness(130%);
+          }
+
+          &:focus {
+            filter: brightness(70%);
+            scale: 0.93;
+          }
+        }
+
+        .func {
+          color: #000;
+          background: #a5a5a5;
+        }
+
+        .oper {
+          background: #7156b6;
+        }
+
+        .zero {
+          width: 125px;
+          border-radius: 100rem;
+          grid-column: span 2;
+          text-align: start;
+          padding: 0 21.5px;
+        }
+      }
+
+      .bottom {
+        width: 100px;
+        height: 2.5px;
+        background: #fff;
+        border-radius: 2px;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
